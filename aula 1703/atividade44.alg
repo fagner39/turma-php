@@ -21,21 +21,7 @@ valor1 <- 0
 
      leia(valor2)
 
-     se(valor2 = 0)entao
-
-        escreval()
-
-        escreval()
-
-        escreval("Valor 2 invalido.")
-
-        escreval()
-
-        escreval()
-
-     fimse
-
-  fimenquanto
+fimenquanto
 
   result<- valor1/valor2
 
