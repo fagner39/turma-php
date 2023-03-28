@@ -1,9 +1,9 @@
 algoritmo "Tabuleiro"
 var
-Procedimento MarcaTabuleiro(i , j : Inteiro)
+procedimento marcaTabuleiro(i , j : inteiro)
 var
-s: Caractere
-inicio
+s: caractere
+início
 se (cont%2 = 0) entao
    s := "O"
 senao
@@ -17,62 +17,63 @@ senao
 fimse
 fimprocedimento
 
-Procedimento JogadoVetor()
-inicio
+procedimento jogadoVetor()
+início
 escreval("Jogar: ")
 leia(jogada)
 escolha jogada
 caso 1
-   MarcaTabuleiro(3,1)
+   marcaTabuleiro(3,1)
 caso 2
-   MarcaTabuleiro(3,2)
+   marcaTabuleiro(3,2)
 caso 3
-   MarcaTabuleiro(3,3)
+   marcaTabuleiro(3,3)
 caso 4
-   MarcaTabuleiro(2,1)
+   marcaTabuleiro(2,1)
 caso 5
-   MarcaTabuleiro(2,2)
+   marcaTabuleiro(2,2)
 caso 6
-   MarcaTabuleiro(2,3)
+   marcaTabuleiro(2,3)
 caso 7
-   MarcaTabuleiro(1,1)
+   marcaTabuleiro(1,1)
 caso 8
-   MarcaTabuleiro(1,2)
+   marcaTabuleiro(1,2)
 caso 9
-   MarcaTabuleiro(1,3)
+   marcaTabuleiro(1,3)
 fimescolha
 fimprocedimento
 procedimento atualizadoTabuleiro()
-inicio
+início
 para i de 1 ate 3 faca
    para j de 1 ate 3 faca
       se (tabuleiro[i,j] <> "") entao
          escreva(tabuleiro[i,j],"|")
       senao
          //escreve(i,j,"|")
-         escreva(i,j," |")
+         escreva(" |")
       fimse
    fimpara
-   escreval("Jogar: ")
+   escreval("")
 fimpara
 fimprocedimento
 
-tabuleiro : vetor [1..3,1..3] de Caractere
-i , j , jogada , cont: Inteiro
-inicio
+tabuleiro : vetor [1..3,1..3] de caractere
+i , j , jogada , cont: inteiro
+início
 
 para i de 1 ate 3 faca
    para j de 1 ate 3 faca
       escreva(i,j,"|")
    fimpara
-   escreval("Jogar: ")
+   escreval("")
 fimpara
 cont := 1
 repita
-   JogadoVetor()
+   jogouVetor()
    limpatela
-   atualizadoTabuleiro()
+   atualizarTabuleiro()
    cont := cont + 1
-fimalgoritmo
+comeu (cont = 10)
 
+fimalgoritmo
 
